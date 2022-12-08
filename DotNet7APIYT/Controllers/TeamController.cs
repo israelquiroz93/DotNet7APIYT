@@ -28,7 +28,7 @@ namespace DotNet7APIYT.Controllers
             }
         }
 
-        [HttpGet("GetTeamById")]
+        [HttpGet("GetTeamById/{teamId}")]
         public async Task<IActionResult> GetTeamById(int teamId)
         {
             try
@@ -73,7 +73,7 @@ namespace DotNet7APIYT.Controllers
         }
 
 
-        [HttpDelete("DeleteTeam")]
+        [HttpDelete("DeleteTeam/{teamId}")]
         public async Task<IActionResult> DeleteTeam(int teamId)
         {
             try

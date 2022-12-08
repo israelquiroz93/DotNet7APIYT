@@ -11,7 +11,8 @@
 
         public async Task<int> AddTeam(Team team)
         {
-            _dbContext.Teams.Add(team);
+            Team newTeam = new Team() { ConfederationId = team.ConfederationId, CountryName = team.CountryName };
+            _dbContext.Teams.Add(newTeam);
             await _dbContext.SaveChangesAsync();
             return team.TeamId;
         }
